@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+
 import './App.css';
+import Age from './Age';
+import Age1 from './Age1';
+import Event from './Event';
+import Task1 from './task1/Task1';
+import Task2 from './Task2/Task2';
+import AgeUpDown from './AgeUpDown';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Router>
+        <Switch>
+          <Route exact path='/one' component={Age}></Route>
+          <Route exact path='/two' component={Age1}></Route>
+          <Route exact path='/event' component={Event}></Route>
+          <Route exact path='/task1' component={Task1}></Route>
+          <Route exact path='/combine' component={AgeUpDown}></Route>
+          <Route exact path='/task2' component={Task2}></Route>
+        </Switch>
+      </Router>
+    
     </div>
   );
 }
