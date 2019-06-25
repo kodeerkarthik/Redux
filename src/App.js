@@ -7,7 +7,10 @@ import Age1 from './Age1';
 import Event from './Event';
 import Task1 from './task1/Task1';
 import Task2 from './Task2/Task2';
+import Task3 from './task3/Task3';
+import Task4 from './Task4/Task4';
 import AgeUpDown from './AgeUpDown';
+import Form from './Form';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route exact path='/task1' component={Task1}></Route>
           <Route exact path='/combine' component={AgeUpDown}></Route>
           <Route exact path='/task2' component={Task2}></Route>
+          <Route exact path='/task3' component={Task3}></Route>
+          <Route exact path='/form' component={Form}></Route>
+          <Route exact path='/task4' component={Task4}></Route>
         </Switch>
       </Router>
     

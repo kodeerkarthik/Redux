@@ -4,7 +4,7 @@ const initialState={
 };
 
 export default (state=initialState,action)=> {
-    debugger;
+  
     switch(action.type){
         case ActionTypes.AGE_UP1:{
             return{...state, age:state.age+action.value}
